@@ -14,6 +14,7 @@ class App extends React.Component {
             icone: null,
             mensagemDeErro: null
         }
+        console.log('construtor')
 
     }
 
@@ -51,7 +52,6 @@ class App extends React.Component {
                 let data = new Date()
                 let estacao = this.obterEstacao(data, posicao.coords.latitude);
                 let icone = this.icones[estacao]
-                console.log(icone)
                 this.setState(
                     {
                         latitude: posicao.coords.latitude,
@@ -69,8 +69,19 @@ class App extends React.Component {
         )
     }
 
+    componentDidMount(){
+        console.log('componentDidMount')
+    }
+
+    componentDidUpdate (){
+        console.log('componentDidUpdate')
+    }
+    
+    componentWillUnmount (){
+        console.log('componentWillUnmount')
+    }
     render() {
-        console.log(this.state)
+        console.log("render")
         return (
             // responsividade, margem acima
             <div className="container mt-2">
