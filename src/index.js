@@ -118,6 +118,9 @@ class App extends React.Component {
                                 </div>
                                 {/* botão azul (outline, 100% de largura e margem acima) */}
                                 <button onClick={this.obterLocalizacao} className="btn btn-outline-primary w-100 mt-2">Qual a minha estação?</button>
+                                <button  className="btn btn-outline-danger w-100 mt-2" onClick={() => ReactDOM.unmountComponentAtNode(document.querySelector('#root'))}>
+                                    Unmount
+                                </button>
                             </div>
                         </div>
                     </div>
